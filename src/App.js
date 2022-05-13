@@ -1,22 +1,21 @@
 import "./App.css";
-import Nav from "./components/Nav";
-import Intro from "./components/Intro";
-import BackTopButton from "./components/BackTopButton";
-import WhichWaterDoYouDrink from "./components/WhichWaterDoYouDrink";
-import InvalidWatersTable from "./components/InvalidWatersTable";
-import GeneralTable from "./components/GeneralTable";
-import Footer from "./components/Footer";
+import Nav from "./components/nav";
+import WhichWaterDoYouDrink from "./components/which-water-do-you-drink";
 
 function App() {
   return (
     <>
       <Nav />
-      <BackTopButton />
-      <Intro />
-      <WhichWaterDoYouDrink />
-      <InvalidWatersTable />
-      <GeneralTable />
-      <Footer />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <WhichWaterDoYouDrink/>
     </>
   );
 }

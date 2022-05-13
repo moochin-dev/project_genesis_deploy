@@ -1,17 +1,16 @@
-import { Affix, Button } from 'antd';
-import './Nav.css'
+import { Affix } from "antd";
 
 const Nav = () => {
-  const top = 10;
   return (
-    <>
-      <Affix offsetTop={top}>
-        <Button type="primary">
-          통과했수?
-        </Button>
-      </Affix>
-      <br />
-    </>
+    <Affix>
+      <div style={{ backgroundColor: "gray" }}>
+        <h1>통과했수</h1>
+        <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
+          <h2>nav</h2>
+          <h3>nav</h3>
+        </nav>
+      </div>
+    </Affix>
   );
 };
 

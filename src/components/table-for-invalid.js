@@ -11,7 +11,9 @@ export default function TableForInvalid() {
       title: "브랜드",
       dataIndex: "brand",
       key: "brand",
-      render: (text, record, index) => <Link to={`/${waterBrands[index].id}`}>{text}</Link>,
+      render: (text, record, index) => (
+        <Link to={`/${waterBrands[index].id}`}>{text}</Link>
+      ),
     },
     {
       title: "수질적합",
@@ -31,15 +33,21 @@ export default function TableForInvalid() {
     },
   ];
 
-  const waterBrandsDataSource = waterBrands.map((x) => {
-    return {
-      key: x.id,
-      brand: x.name,
-      validity: x.recent_test_result,
-      invalid_count: x.total_invalid_count,
-      open_date: x.open_date,
-    };
-  });
+  const waterBrandsDataSource = waterBrands
+    .sort((a, b) => {
+      if (a.total_invalid_count < b.total_invalid_count) return -1;
+      if (a.total_invalid_count > b.total_invalid_count) return 1;
+      return 0;
+    })
+    .map((x) => {
+      return {
+        key: x.id,
+        brand: x.name,
+        validity: x.recent_test_result,
+        invalid_count: x.total_invalid_count,
+        open_date: x.open_date,
+      };
+    });
 
   return (
     <>

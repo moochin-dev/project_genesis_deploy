@@ -4,12 +4,14 @@ import { Table } from "antd";
 import { getWaterBrands } from "../data";
 
 export default function TableForInvalid() {
+  const waterBrands = getWaterBrands();
+
   const columns = [
     {
       title: "브랜드",
       dataIndex: "brand",
       key: "brand",
-      //render: (text) => <Link >{text}</Link>,
+      render: (text, record, index) => <Link to={`/${waterBrands[index].id}`}>{text}</Link>,
     },
     {
       title: "수질적합",
@@ -29,7 +31,7 @@ export default function TableForInvalid() {
     },
   ];
 
-  const waterBrandsDataSource = getWaterBrands().map((x) => {
+  const waterBrandsDataSource = waterBrands.map((x) => {
     return {
       key: x.id,
       brand: x.name,

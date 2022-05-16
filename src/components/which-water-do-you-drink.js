@@ -1,5 +1,7 @@
+import React from "react";
 import { Carousel } from "antd";
 import { getWaterBrands } from "../data";
+import { Link } from "react-router-dom";
 
 export default function WhichWaterDoYouDrink() {
   const waterBrands = getWaterBrands();
@@ -17,7 +19,9 @@ export default function WhichWaterDoYouDrink() {
       <Carousel autoplay>
         {waterBrands.map((waterBrand) => (
           <div key={waterBrand.id}>
+            <Link to={`/${waterBrand.id}`}>
               <h3 style={contentStyle}>{`${waterBrand.name}`}</h3>
+            </Link>
           </div>
         ))}
       </Carousel>

@@ -318,22 +318,6 @@ const waterBrandVersionSourceMappings = [
   },
 ];
 
-const waterSourceTestHistory = [
-    
-]
-
 export function getWaterBrands() {
   return waterBrands;
-}
-
-export function getWaterBrandVersions() {
-  return waterBrandVersions;
-}
-
-export function getWaterSources() {
-  return waterSources;
-}
-
-export function getWaterBrandVersionSourceMappings() {
-    return waterBrandVersionSourceMappings;
 }

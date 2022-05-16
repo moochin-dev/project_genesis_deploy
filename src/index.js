@@ -4,13 +4,20 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { getWaterBrands } from "./data";
+import MainPage from "./routes/main-page";
 import DetailPage from "./routes/detail-page";
-import WhichWaterDoYouDrink from "./components/which-water-do-you-drink";
 
+const waterBrands = getWaterBrands();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <App/>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<MainPage />} />
+        <Route path=":waterBrandId" element={<DetailPage />} />
+      </Route>
+    </Routes>
   </BrowserRouter>
 );
 

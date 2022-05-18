@@ -1,6 +1,7 @@
 import React from "react";
 import WhichWaterDoYouDrink from "../components/which-water-do-you-drink";
 import TableForInvalid from "../components/table-for-invalid";
+import TableForInvalid2 from "../components/table-for-invalid2";
 
 function MainPage() {
   return (
@@ -15,7 +16,7 @@ function MainPage() {
         mollit anim id est laborum.
       </p>
       <WhichWaterDoYouDrink />
-      <TableForInvalid />
+      <TableForInvalid2 />
     </div>
   );
 }

@@ -17,7 +17,6 @@ function MainPage() {
         mollit anim id est laborum.
       </p>
       <WhichWaterDoYouDrink />
-      <WhichWaterDoYouDrink2 />
       <TableForInvalid2 />
     </div>
   );

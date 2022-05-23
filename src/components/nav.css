@@ -1,0 +1,25 @@
+@import url("../typo.css");
+
+.navbarItems {
+  background: #5effb1;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbarLogo {
+  background-color: #009fe3;
+  margin-bottom: 0;
+  color: black;
+}
+
+.navbarLogo:hover {
+  color: white;
+}
+
+.menuButton {
+  border: none;
+  background-color: #009fe3;
+  margin-bottom: 0;
+}
+

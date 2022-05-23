@@ -11,7 +11,7 @@ function App() {
   const waterBrands = getWaterBrands();
 
   return (
-    <div>
+    <div className="App">
       <Nav />
       <BackTopButton/>
       <Outlet/>

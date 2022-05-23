@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "S-CoreDream-6Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "S-CoreDream-5Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "S-CoreDream-4Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#mainTitle {
+  font-family: "S-CoreDream-6Bold";
+  letter-spacing: 0%;
+  font-size: 32pt;
+}
+
+#mainSubTitle {
+  font-family: "S-CoreDream-5Medium";
+  letter-spacing: -0.5%;
+  line-height: 150%;
+  font-size: 15pt;
+}
+
+#contentTitle {
+  font-family: "S-CoreDream-6Bold";
+  letter-spacing: 0%;
+  font-size: 20pt;
+}
+
+#contentSubTitle {
+  font-family: "S-CoreDream-5Medium";
+  letter-spacing: -2%;
+  font-size: 13pt;
+}
+
+#contentText {
+  font-family: "S-CoreDream-4Regular";
+  letter-spacing: -4%;
+  line-height: 170%;
+  font-size: 12pt;
+}
+
+#contentSubText {
+  font-family: "S-CoreDream-3Light";
+  letter-spacing: -2%;
+  font-size: 8pt;
+}

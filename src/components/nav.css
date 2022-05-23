@@ -5,6 +5,11 @@
   height: 56px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  z-index: 100;
 }
 
 .navbarLogo {
@@ -22,4 +27,3 @@
   background-color: #009fe3;
   margin-bottom: 0;
 }
-

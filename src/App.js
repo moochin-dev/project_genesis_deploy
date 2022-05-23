@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <BackTopButton/>
-      <Outlet/>
-      <Footer/>
+      <BackTopButton />
+      <Outlet />
+      <Footer />
     </div>
   );
 }

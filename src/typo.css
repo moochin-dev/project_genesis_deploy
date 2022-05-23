@@ -30,40 +30,46 @@
   font-style: normal;
 }
 
-#mainTitle {
+.mainTitle {
   font-family: "S-CoreDream-6Bold";
   letter-spacing: 0%;
-  font-size: 32pt;
+  font-size: 32px;
+  margin: 0;
 }
 
-#mainSubTitle {
+.mainSubTitle {
   font-family: "S-CoreDream-5Medium";
   letter-spacing: -0.5%;
   line-height: 150%;
-  font-size: 15pt;
+  font-size: 15px;
+  margin: 0;
 }
 
-#contentTitle {
+.contentTitle {
   font-family: "S-CoreDream-6Bold";
   letter-spacing: 0%;
-  font-size: 20pt;
+  font-size: 20px;
+  margin: 0;
 }
 
-#contentSubTitle {
+.contentSubTitle {
   font-family: "S-CoreDream-5Medium";
   letter-spacing: -2%;
-  font-size: 13pt;
+  font-size: 13px;
+  margin: 0;
 }
 
-#contentText {
+.contentText {
   font-family: "S-CoreDream-4Regular";
   letter-spacing: -4%;
   line-height: 170%;
   font-size: 12pt;
+  margin: 0;
 }
 
-#contentSubText {
+.contentSubText {
   font-family: "S-CoreDream-3Light";
   letter-spacing: -2%;
   font-size: 8pt;
+  margin: 0;
 }

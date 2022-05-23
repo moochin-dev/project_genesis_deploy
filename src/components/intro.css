@@ -1,0 +1,15 @@
+@import url(../typo.css);
+
+.wrapper {
+  padding-top: 96px;
+  padding-bottom: 20px;
+}
+
+.grayTypo {
+  color: #707070;
+}
+
+.canvas {
+  width: 304px;
+  height: 664px;
+}

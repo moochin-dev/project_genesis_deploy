@@ -8,9 +8,6 @@ const Nav = () => {
       <Link to="/" className="navbarLogo mainTitle">
         통과했수
       </Link>
-      <button className="menuButton mainSubTitle">
-        MENU
-      </button>
     </nav>
   );
 };

@@ -1,15 +1,86 @@
 @import url(../typo.css);
 
 .wrapper {
-  padding-top: 96px;
+  padding-top: 40px;
   padding-bottom: 20px;
+  height: 892px;
+}
+
+.text1 {
+  position: absolute;
+  top: 64px;
+  left: 8px;
+}
+
+.text2 {
+  position: absolute;
+  top: 98px;
+  left: 8px;
+}
+
+.text3 {
+  position: absolute;
+  top: 155px;
+  left: 8px;
+}
+
+.text4 {
+  position: absolute;
+  top: 437px;
+  right: 16px;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.text5 {
+  position: absolute;
+  top: 553px;
+  left: 3px;
+  white-space: pre-line;
+  text-align: center;
 }
 
 .grayTypo {
   color: #707070;
 }
 
-.canvas {
-  width: 304px;
-  height: 664px;
+.img1 {
+  position: absolute;
+  top: 208px;
+  right: 0;
+  width: 216px;
+  height: 216px;
+  background-color: #d9d9d9;
+  z-index: 8;
+}
+
+.img2 {
+  position: absolute;
+  top: 360px;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: #d04848;
+  z-index: 9;
+}
+
+.img3 {
+  position: absolute;
+  top: 496px;
+  right: 0;
+  width: 176px;
+  height: 176px;
+  background-color: #b97cf5;
+  opacity: 69%;
+  z-index: 10;
+}
+
+.img4 {
+  position: absolute;
+  top: 632px;
+  left: 0;
+  width: 240px;
+  height: 240px;
+  background-color: #d9d9d9;
+  z-index: 8;
 }

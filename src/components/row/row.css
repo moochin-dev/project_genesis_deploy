@@ -1,5 +1,13 @@
 @import url(../../typo.css);
 
 .rowWrapper {
-    height: 548px;
+    box-sizing: content-box;
+    height: 508px;
+    padding-bottom: 40px;
+}
+.rowTextWrapper {
+    box-sizing: content-box;
+    width: 304px;
+    height: 168px;
+    margin: 0 8px;
 }

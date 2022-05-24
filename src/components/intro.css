@@ -8,25 +8,25 @@
   height: 832px;
 }
 
-.text1 {
+.introText1 {
   position: absolute;
   top: 120px;
   left: 28px;
 }
 
-.text2 {
+.introText2 {
   position: absolute;
   top: 144px;
   left: 28px;
 }
 
-.text3 {
+.introText3 {
   position: absolute;
   top: 211px;
   left: 28px;
 }
 
-.text4 {
+.introText4 {
   position: absolute;
   top: 493px;
   right: 36px;
@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-.text5 {
+.introText5 {
   position: absolute;
   top: 609px;
   left: 23px;
@@ -42,11 +42,11 @@
   text-align: center;
 }
 
-.grayTypo {
+.introGrayTypo {
   color: #707070;
 }
 
-.img1 {
+.introImg1 {
   position: absolute;
   top: 264px;
   right: 20px;
@@ -56,7 +56,7 @@
   z-index: 8;
 }
 
-.img2 {
+.introImg2 {
   position: absolute;
   top: 416px;
   left: 20px;
@@ -66,7 +66,7 @@
   z-index: 9;
 }
 
-.img3 {
+.introImg3 {
   position: absolute;
   top: 552px;
   right: 20px;
@@ -77,7 +77,7 @@
   z-index: 10;
 }
 
-.img4 {
+.introImg4 {
   position: absolute;
   top: 688px;
   left: 20px;

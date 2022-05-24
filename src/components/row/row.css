@@ -9,5 +9,27 @@
     box-sizing: content-box;
     width: 304px;
     height: 168px;
-    margin: 0 8px;
+    margin: 0 8px 20px 8px;
+}
+
+.rowGrayTypo {
+    color: #707070;
+  }
+
+.rowText1 {
+    position: absolute;
+    top: 972px;
+    right: 28px;
+}
+
+.rowText2 {
+    position: absolute;
+    top: 1006px;
+    right: 28px;
+}
+
+.rowText3 {
+    position: absolute;
+    top: 1063px;
+    right: 28px;
 }

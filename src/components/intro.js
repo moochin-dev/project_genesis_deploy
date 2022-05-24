@@ -3,7 +3,7 @@ import "./intro.css";
 
 const Intro = () => {
   return (
-    <div className="wrapper">
+    <div className="introWrapper">
       <p className="contentTitle text1">당신이 먹는 생수,</p>
       <p className="mainTitle text2">알고 드시나요?</p>
       <p className="mainSubTitle text3 grayTypo">

@@ -4,15 +4,13 @@ import WhichWaterDoYouDrink2 from "../components/which-water-do-you-drink2";
 import TableForInvalid from "../components/table-for-invalid";
 import TableForInvalid2 from "../components/table-for-invalid2";
 import Intro from "../components/intro";
-import APITester from "../components/apiTester";
+import Row from "../components/row/row";
 
 function MainPage() {
   return (
     <div>
       <Intro />
-      <WhichWaterDoYouDrink />
-      <TableForInvalid2 />
-      <APITester/>
+      <Row />
     </div>
   );
 }

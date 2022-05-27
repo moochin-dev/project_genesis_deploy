@@ -32,7 +32,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 992px;
   height: 128px;
 }
 
@@ -40,6 +39,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 992px;
+  height: 128px;
+}
+
+.rowSliderSlide1 {
+  background-color: #866262;
+  width: 128px;
+  height: 128px;
+}
+
+.rowSliderSlide2 {
+  background-color: #5effb1;
+  width: 128px;
   height: 128px;
 }

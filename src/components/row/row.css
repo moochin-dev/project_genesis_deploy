@@ -33,3 +33,15 @@
     top: 1063px;
     right: 28px;
 }
+
+.rowBackground {
+    width: 304px;
+    height: 304px;
+    background-color: #e9b5b5;
+    margin: 0 8px;
+}
+
+.rowRowSlider {
+    position: absolute;
+    top: 1152px;
+}

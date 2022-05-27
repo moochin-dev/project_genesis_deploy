@@ -2,6 +2,7 @@ const waterBrands = [
   {
     id: 1,
     name: "삼다수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 1000,
     open_date: "2000-01-01",
     recent_test_result: true,
@@ -14,6 +15,7 @@ const waterBrands = [
   {
     id: 2,
     name: "스파클생수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 800,
     open_date: "2002-01-01",
     recent_test_result: true,
@@ -26,6 +28,7 @@ const waterBrands = [
   {
     id: 3,
     name: "백산수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 800,
     open_date: "2008-01-01",
     recent_test_result: true,
@@ -38,6 +41,7 @@ const waterBrands = [
   {
     id: 4,
     name: "몽베스트생수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 800,
     open_date: "2001-01-01",
     recent_test_result: false,
@@ -50,6 +54,7 @@ const waterBrands = [
   {
     id: 5,
     name: "아이시스",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 600,
     open_date: "2005-01-01",
     recent_test_result: true,
@@ -62,6 +67,7 @@ const waterBrands = [
   {
     id: 6,
     name: "동원샘물",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 700,
     open_date: "2005-01-01",
     recent_test_result: true,
@@ -74,6 +80,7 @@ const waterBrands = [
   {
     id: 7,
     name: "지리산수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 700,
     open_date: "2005-01-01",
     recent_test_result: true,
@@ -86,6 +93,7 @@ const waterBrands = [
   {
     id: 8,
     name: "다이아몬드생수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 900,
     open_date: "2010-01-01",
     recent_test_result: true,
@@ -98,6 +106,7 @@ const waterBrands = [
   {
     id: 9,
     name: "평창수",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 700,
     open_date: "2002-01-01",
     recent_test_result: false,
@@ -110,6 +119,7 @@ const waterBrands = [
   {
     id: 10,
     name: "풀무원샘물",
+    image_url: "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=330:330&_v=20210712143816",
     consumer_price: 800,
     open_date: "2010-01-01",
     recent_test_result: true,

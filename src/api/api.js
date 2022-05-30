@@ -1,7 +1,11 @@
-const [waterBrands, setWaterBrands] = useState([]);
+import axios from "axios";
 
-  useEffect(() => {
-    axios.get("http://3.39.164.17:8000/waterbrand/").then((response) => {
-      setWaterBrands(response.data);
-    });
-  }, []);
+let waterBrands = [];
+
+axios.get("http://3.39.164.17:8000/waterbrand/").then((response) => {
+  waterBrands = response.data;
+});
+
+export const getWaterBrands = () => {
+  return waterBrands;
+}

@@ -5,12 +5,15 @@ import "./row-slider.css";
 
 const RowSlider = () => {
   //waterBrands 불러오기
+
   const [waterBrands, setWaterBrands] = useState([]);
+
   useEffect(() => {
     axios.get("http://3.39.164.17:8000/waterbrand/").then((response) => {
       setWaterBrands(response.data);
     });
-  }, []);
+  });
+
   let row1 = waterBrands.slice(0, waterBrands.length / 2);
   let row2 = waterBrands.slice(waterBrands.length / 2);
 
@@ -98,7 +101,7 @@ const RowSlider = () => {
           >
             {row1.map((waterBrand, index) => (
               <div className="rowSliderSlide1" key={index}>
-                <Link to={`/${waterBrand.id}`}>
+                <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
                   <img
                     src={`${waterBrand.image_url}`}
                     alt={`${waterBrand.name}`}
@@ -124,7 +127,7 @@ const RowSlider = () => {
           >
             {row2.map((waterBrand, index) => (
               <div className="rowSliderSlide2" key={index}>
-                <Link to={`/${waterBrand.id}`}>
+                <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
                   <img
                     src={`${waterBrand.image_url}`}
                     alt={`${waterBrand.name}`}

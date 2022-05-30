@@ -4,11 +4,9 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { getWaterBrands } from "./data";
 import MainPage from "./routes/main-page";
 import DetailPage from "./routes/detail-page";
 
-const waterBrands = getWaterBrands();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>

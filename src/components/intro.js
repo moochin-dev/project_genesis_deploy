@@ -6,7 +6,7 @@ const Intro = () => {
     <div className="introWrapper">
       <p className="contentTitle introText1">당신이 먹는 생수,</p>
       <p className="mainTitle introText2">알고 드시나요?</p>
-      <p className="mainSubTitle introText3 introGrayTypo">
+      <p className="mainSubTitle introText3">
         (수질검사 통과 못한게 많다는 텍스트)
       </p>
       <div className='introImg1'></div>

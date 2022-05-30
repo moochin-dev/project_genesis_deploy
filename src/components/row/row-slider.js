@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./row-slider.css";
 
 const RowSlider = () => {
@@ -81,10 +82,6 @@ const RowSlider = () => {
     setSlideTransition2(transitionStyle2);
   };
 
-  useEffect(() => {
-    console.log([currentIndex1, currentIndex2])
-  }, [currentIndex1, currentIndex2])
-
   return (
     <div className="rowSliderSliderArea">
       <div className="rowSliderSlider">
@@ -101,11 +98,17 @@ const RowSlider = () => {
           >
             {row1.map((waterBrand, index) => (
               <div className="rowSliderSlide1" key={index}>
-                <img
-                  src={`${waterBrand.image_url}`}
-                  alt={`${waterBrand.name}`}
-                  style={{ width: "110px", height: "110px", margin: "9px 9px" }}
-                />
+                <Link to={`/${waterBrand.id}`}>
+                  <img
+                    src={`${waterBrand.image_url}`}
+                    alt={`${waterBrand.name}`}
+                    style={{
+                      width: "110px",
+                      height: "110px",
+                      margin: "9px 9px",
+                    }}
+                  />
+                </Link>
               </div>
             ))}
           </div>
@@ -121,11 +124,17 @@ const RowSlider = () => {
           >
             {row2.map((waterBrand, index) => (
               <div className="rowSliderSlide2" key={index}>
-                <img
-                  src={`${waterBrand.image_url}`}
-                  alt={`${waterBrand.name}`}
-                  style={{ width: "110px", height: "110px", margin: "9px 9px" }}
-                />
+                <Link to={`/${waterBrand.id}`}>
+                  <img
+                    src={`${waterBrand.image_url}`}
+                    alt={`${waterBrand.name}`}
+                    style={{
+                      width: "110px",
+                      height: "110px",
+                      margin: "9px 9px",
+                    }}
+                  />
+                </Link>
               </div>
             ))}
           </div>

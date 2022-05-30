@@ -24,6 +24,7 @@
   position: absolute;
   top: 211px;
   left: 28px;
+  color: #707070;
 }
 
 .introText4 {
@@ -40,10 +41,6 @@
   left: 23px;
   white-space: pre-line;
   text-align: center;
-}
-
-.introGrayTypo {
-  color: #707070;
 }
 
 .introImg1 {

@@ -1,0 +1,35 @@
+@import url(../../typo.css);
+
+.tableWrapperWrapper {
+  box-sizing: content-box;
+  background-color: black;
+  width: 320px;
+  height: 700px;
+}
+
+.tableWrapperTextWrapper {
+  color: white;
+  text-align: center;
+  padding-top: 24px;
+  margin: 0;
+}
+
+.tableWrapperText3 {
+  color: #707070;
+}
+
+.tableWrapperTableWrapper1 {
+  width: 304px;
+  height: 304px;
+  background-color: #d9d9d9;
+  position: relative;
+  left: 8px;
+}
+
+.tableWrapperTableWrapper2 {
+  width: 304px;
+  height: 160px;
+  background-color: #9a3030;
+  position: relative;
+  left: 8px;
+}

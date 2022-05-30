@@ -1,44 +1,25 @@
-@font-face {
-  font-family: "S-CoreDream-6Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
 @font-face {
-  font-family: "S-CoreDream-5Medium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "S-CoreDream-4Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "S-CoreDream-3Light";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
-    format("woff");
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 .mainTitle {
-  font-family: "S-CoreDream-6Bold";
+  font-weight: 600;
   letter-spacing: 0%;
-  font-size: 32px;
+  font-size: 34px;
   margin: 0;
 }
 
 .mainSubTitle {
-  font-family: "S-CoreDream-5Medium";
+  font-weight: 500;
   letter-spacing: -0.5%;
   line-height: 150%;
   font-size: 15px;
@@ -46,30 +27,29 @@
 }
 
 .contentTitle {
-  font-family: "S-CoreDream-6Bold";
+  font-weight: 500;
   letter-spacing: 0%;
   font-size: 20px;
   margin: 0;
 }
 
 .contentSubTitle {
-  font-family: "S-CoreDream-5Medium";
-  letter-spacing: -2%;
-  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0%;
+  font-size: 14px;
   margin: 0;
 }
 
 .contentText {
-  font-family: "S-CoreDream-4Regular";
+  font-weight: 200;
   letter-spacing: -4%;
-  line-height: 170%;
-  font-size: 12pt;
+  font-size: 12px;
   margin: 0;
 }
 
 .contentSubText {
   font-family: "S-CoreDream-3Light";
   letter-spacing: -2%;
-  font-size: 8pt;
+  font-size: 8px;
   margin: 0;
 }

@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./row-slider.css";
 
-const RowSlider = () => {
+const RowSlider = (props) => {
   //waterBrands 불러오기
-
-  const [waterBrands, setWaterBrands] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://3.39.164.17:8000/waterbrand/").then((response) => {
-      setWaterBrands(response.data);
-    });
-  });
+  const waterBrands = props.waterBrands;
 
   let row1 = waterBrands.slice(0, waterBrands.length / 2);
   let row2 = waterBrands.slice(waterBrands.length / 2);
@@ -101,7 +93,10 @@ const RowSlider = () => {
           >
             {row1.map((waterBrand, index) => (
               <div className="rowSliderSlide1" key={index}>
-                <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
+                <Link
+                  to={`/${waterBrand.id}`}
+                  state={{ waterBrand: waterBrand }}
+                >
                   <img
                     src={`${waterBrand.image_url}`}
                     alt={`${waterBrand.name}`}
@@ -127,7 +122,10 @@ const RowSlider = () => {
           >
             {row2.map((waterBrand, index) => (
               <div className="rowSliderSlide2" key={index}>
-                <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
+                <Link
+                  to={`/${waterBrand.id}`}
+                  state={{ waterBrand: waterBrand }}
+                >
                   <img
                     src={`${waterBrand.image_url}`}
                     alt={`${waterBrand.name}`}
@@ -144,28 +142,16 @@ const RowSlider = () => {
         </div>
       </div>
       <button className="rowSliderButtonLeft" onClick={() => handleSwipe(-1)}>
-        <svg
-          width="12.5"
-          height="96"
-          viewBox="0 0 14 98"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="rowSliderButtonLeftVector"
-        >
-          <path d="M13.5 97L1 49L13.5 1" stroke="black" />
-        </svg>
+        <img
+          src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-left.png")}
+          alt="btn-left"
+        />
       </button>
       <button className="rowSliderButtonRight" onClick={() => handleSwipe(1)}>
-        <svg
-          width="14"
-          height="98"
-          viewBox="0 0 14 98"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="rowSliderButtonRightVector"
-        >
-          <path d="M0.5 97L13 49L0.5 1" stroke="black" />
-        </svg>
+        <img
+          src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-right.png")}
+          alt="btn-right"
+        />
       </button>
     </div>
   );

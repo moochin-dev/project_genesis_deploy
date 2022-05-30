@@ -1,7 +1,7 @@
 @import "~antd/dist/antd.css";
 .App {
-  box-sizing: content-box;
-  width: 320px;
-  padding: 0 20px;
+  box-sizing: border-box;
   overflow-x: hidden;
+  background-color: black;
+  color: white;
 }

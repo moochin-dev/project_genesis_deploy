@@ -1,85 +1,82 @@
 @import url(../typo.css);
 
 .introWrapper {
-  box-sizing: content-box;
-  border: none;
-  padding-top: 40px;
-  padding-bottom: 20px;
-  height: 832px;
+  height: 1026px;
+}
+
+.introTitleWrapper {
+  position: absolute;
+  top: 136px;
+  left: 20px;
+  width: 304px;
+  height: 106px;
 }
 
 .introText1 {
-  position: absolute;
-  top: 120px;
-  left: 28px;
+  margin-bottom: 10px;
 }
 
 .introText2 {
-  position: absolute;
-  top: 144px;
-  left: 28px;
+  white-space: pre-line;
+  line-height: 40px;
 }
 
 .introText3 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: -0.5%;
   position: absolute;
-  top: 211px;
-  left: 28px;
-  color: #707070;
+  top: 586px;
+  left: 20px;
+  white-space: pre-line;
+  text-align: left;
 }
 
 .introText4 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: -0.5%;
   position: absolute;
-  top: 493px;
-  right: 36px;
+  top: 722px;
+  left: 283px;
   white-space: pre-line;
-  text-align: center;
-}
-
-.introText5 {
-  position: absolute;
-  top: 609px;
-  left: 23px;
-  white-space: pre-line;
-  text-align: center;
+  text-align: right;
 }
 
 .introImg1 {
   position: absolute;
-  top: 264px;
-  right: 20px;
-  width: 216px;
-  height: 216px;
-  background-color: #d9d9d9;
-  z-index: 8;
+  top: 282px;
+  left: 0px;
+  width: 270px;
+  height: 240px;
+  z-index: 9;
 }
 
 .introImg2 {
   position: absolute;
-  top: 416px;
-  left: 20px;
-  width: 160px;
-  height: 160px;
-  background-color: #d04848;
-  z-index: 9;
+  top: 474px;
+  left: 176px;
+  width: 238px;
+  height: 184px;
+  z-index: 8;
 }
 
 .introImg3 {
   position: absolute;
-  top: 552px;
-  right: 20px;
-  width: 176px;
-  height: 176px;
-  background-color: #b97cf5;
-  opacity: 69%;
-  z-index: 10;
+  top: 690px;
+  left: 0px;
+  width: 238px;
+  height: 184px;
+  z-index: 9;
 }
 
 .introImg4 {
   position: absolute;
-  top: 688px;
-  left: 20px;
-  width: 240px;
-  height: 240px;
-  background-color: #d9d9d9;
+  top: 826px;
+  right: 0px;
+  width: 320px;
+  height: 216px;
   z-index: 8;
 }

@@ -2,7 +2,8 @@ import React from "react";
 import "./row.css";
 import RowSlider from "./row-slider";
 
-const Row = () => {
+const Row = (props) => {
+  const waterBrands = props.waterBrands;
   return (
     <>
       <div className="rowWrapper">
@@ -13,9 +14,10 @@ const Row = () => {
             (수질검사 통과 못한게 많다는 sub text)
           </p>
         </div>
-        
-        <div className="rowBackground"><RowSlider /></div>
-        
+
+        <div className="rowBackground">
+          <RowSlider waterBrands={waterBrands} />
+        </div>
       </div>
     </>
   );

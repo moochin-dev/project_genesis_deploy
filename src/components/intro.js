@@ -4,17 +4,36 @@ import "./intro.css";
 const Intro = () => {
   return (
     <div className="introWrapper">
-      <p className="contentTitle introText1">당신이 먹는 생수,</p>
-      <p className="mainTitle introText2">알고 드시나요?</p>
-      <p className="mainSubTitle introText3">
-        (수질검사 통과 못한게 많다는 텍스트)
+      <div className="introTitleWrapper">
+        <p className="contentSubTitle introText1">당신이 먹는 생수,</p>
+        <p className="mainTitle introText2">{"얼마나 알고\n계신가요?"}</p>
+      </div>
+      <img
+        className="introImg1"
+        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img1.png")}
+        alt="introImg1"
+      />
+      <img
+        className="introImg2"
+        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img2.png")}
+        alt="introImg2"
+      />
+      <p className="introText3">
+        {"국내 생수 브랜드는\n40가지가 넘지만,"}
       </p>
-      <div className='introImg1'></div>
-      <div className='introImg2'></div>
-      <p className ='introText4 mainSubTitle'>{'국내 생수 브랜드는\n40가지가 넘지만,'}</p>
-      <p className ='introText5 mainSubTitle'>{'생수 제조원은\n6개밖에 되지 않아요!'}</p>
-      <div className='introImg3'></div>
-      <div className='introImg4'></div>
+      <p className="introText4">
+        {"생수 제조원은 6곳\n밖에 되지 않아요!"}
+      </p>
+      <img
+        className="introImg3"
+        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img3.png")}
+        alt="introImg3"
+      />
+      <img
+        className="introImg4"
+        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img4.png")}
+        alt="introImg4"
+      />
     </div>
   );
 };

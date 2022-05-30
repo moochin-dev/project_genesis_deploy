@@ -18,7 +18,11 @@ export default function DetailPage() {
       <h2>{waterBrand.name}</h2>
       <h1>제조사</h1>
       <h2>{waterBrand.company}</h2>
-      <img src={waterBrand.image_url} alt={`${waterBrand.name} 이미지`} />
+      <img
+        src={waterBrand.image_url}
+        alt={`${waterBrand.name} 이미지`}
+        style={{ width: "304px", height: "304px" }}
+      />
     </>
   );
 }

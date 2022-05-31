@@ -1,47 +1,35 @@
 @import url(../../typo.css);
 
 .rowWrapper {
-    box-sizing: content-box;
-    height: 508px;
-    padding-bottom: 40px;
+  box-sizing: content-box;
+  height: 778px;
 }
 .rowTextWrapper {
-    box-sizing: content-box;
-    width: 304px;
-    height: 168px;
-    margin: 0 8px 20px 8px;
+  width: 320px;
+  height: 106px;
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  top: 1162px;
+  right: 20px;
 }
 
 .rowGrayTypo {
-    color: #707070;
-  }
+  color: #707070;
+}
 
 .rowText1 {
-    position: absolute;
-    top: 972px;
-    right: 28px;
 }
 
 .rowText2 {
-    position: absolute;
-    top: 1006px;
-    right: 28px;
 }
 
 .rowText3 {
-    position: absolute;
-    top: 1063px;
-    right: 28px;
 }
 
 .rowBackground {
-    width: 304px;
-    height: 304px;
-    background-color: #e9b5b5;
-    margin: 0 8px;
-}
-
-.rowRowSlider {
-    position: absolute;
-    top: 1152px;
+  width: 100%;
+  height: 552px;
+  position: absolute;
+  top: 1268px;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./row-slider.css";
 
@@ -20,6 +20,23 @@ const RowSlider = (props) => {
 
   row1 = rowTail1.concat(row1, rowHead1);
   row2 = rowTail2.concat(row2, rowHead2);
+
+  //dimension 만지기
+  const windowWidth = props.windowWidth;
+  const defaultWindowWidth = 360;
+  const percent = windowWidth / defaultWindowWidth;
+  const defaultSlideWidth = 152;
+  const defaultSlideWing = 80;
+  const [slideWidth, setSlideWidth] = useState(defaultSlideWidth);
+  const [slideWing, setSlideWing] = useState(defaultSlideWing);
+  const [slideGap, setSlideGap] = useState(
+    (defaultWindowWidth - defaultSlideWidth - 2 * defaultSlideWing) / 2
+  );
+  useEffect(() => {
+    setSlideWidth(defaultSlideWidth * percent);
+    setSlideWing(defaultSlideWing * percent);
+    setSlideGap((windowWidth - slideWidth - 2 * slideWing) / 2);
+  }, [windowWidth]);
 
   //carousel의 슬라이딩 기능 구현
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -78,68 +95,66 @@ const RowSlider = (props) => {
   };
 
   return (
-    <div className="rowSliderSliderArea">
-      <div className="rowSliderSlider">
-        <div className="rowSliderSliderList">
+    <>
+      <div
+        className="rowSliderSliderTrack1"
+        style={{
+          transition: slideTransition1,
+          width: `${slideWidth * row1.length + slideGap * (row1.length - 1)}px`,
+          transform: `translateX(${
+            windowWidth / 2 -
+            (slideWidth + slideGap) * 2 -
+            slideWidth / 2 -
+            (slideWidth + slideGap) * currentIndex1
+          }px)`,
+        }}
+      >
+        {row1.map((waterBrand, index) => (
           <div
-            className="rowSliderSliderTrack1"
-            style={{
-              transform: `translate(${
-                152 - (128 + 16) * 2 - 128 / 2 - (128 + 16) * currentIndex1
-              }px, 16px)`,
-              transition: slideTransition1,
-              width: `${128 * row1.length + 16 * (row1.length - 1)}px`,
-            }}
+            className="rowSliderSlide1"
+            key={index}
+            style={{ width: `${slideWidth}px` }}
           >
-            {row1.map((waterBrand, index) => (
-              <div className="rowSliderSlide1" key={index}>
-                <Link
-                  to={`/${waterBrand.id}`}
-                  state={{ waterBrand: waterBrand }}
-                >
-                  <img
-                    src={`${waterBrand.image_url}`}
-                    alt={`${waterBrand.name}`}
-                    style={{
-                      width: "110px",
-                      height: "110px",
-                      margin: "9px 9px",
-                    }}
-                  />
-                </Link>
-              </div>
-            ))}
+            <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
+              <img
+                src={`${waterBrand.image_url}`}
+                alt={`${waterBrand.name}`}
+                style={{
+                  width: `${133 * percent}px`,
+                  height: "133px",
+                  margin: "9.5px",
+                  boxSizing: "content-box",
+                }}
+              />
+            </Link>
           </div>
-          <div
-            className="rowSliderSliderTrack2"
-            style={{
-              transform: `translate(${
-                152 - (128 + 16) * (2 + 1) + 16 / 2 - (128 + 16) * currentIndex2
-              }px, 32px)`,
-              transition: slideTransition2,
-              width: `${128 * row2.length + 16 * (row2.length - 1)}px`,
-            }}
-          >
-            {row2.map((waterBrand, index) => (
-              <div className="rowSliderSlide2" key={index}>
-                <Link
-                  to={`/${waterBrand.id}`}
-                  state={{ waterBrand: waterBrand }}
-                >
-                  <img
-                    src={`${waterBrand.image_url}`}
-                    alt={`${waterBrand.name}`}
-                    style={{
-                      width: "110px",
-                      height: "110px",
-                      margin: "9px 9px",
-                    }}
-                  />
-                </Link>
-              </div>
-            ))}
+        ))}
+      </div>
+      <div
+        className="rowSliderSliderTrack2"
+        style={{
+          transform: `translateX(${
+            152 - (128 + 16) * (2 + 1) + 16 / 2 - (128 + 16) * currentIndex2
+          }px)`,
+          transition: slideTransition2,
+          width: `${128 * row2.length + 16 * (row2.length - 1)}px`,
+        }}
+      >
+        {row2.map((waterBrand, index) => (
+          <div className="rowSliderSlide2" key={index}>
+            <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
+              <img
+                src={`${waterBrand.image_url}`}
+                alt={`${waterBrand.name}`}
+                style={{
+                  width: "110px",
+                  height: "110px",
+                  margin: "9px 9px",
+                }}
+              />
+            </Link>
           </div>
-        </div>
+        ))}
       </div>
       <button className="rowSliderButtonLeft" onClick={() => handleSwipe(-1)}>
         <img
@@ -153,7 +168,7 @@ const RowSlider = (props) => {
           alt="btn-right"
         />
       </button>
-    </div>
+    </>
   );
 };
 

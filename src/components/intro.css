@@ -31,6 +31,7 @@
   left: 20px;
   white-space: pre-line;
   text-align: left;
+  color: white;
 }
 
 .introText4 {
@@ -40,16 +41,16 @@
   letter-spacing: -0.5%;
   position: absolute;
   top: 722px;
-  left: 283px;
+  right: 20px;
   white-space: pre-line;
   text-align: right;
+  color: white;
 }
 
 .introImg1 {
   position: absolute;
   top: 282px;
   left: 0px;
-  width: 270px;
   height: 240px;
   z-index: 9;
 }
@@ -57,8 +58,7 @@
 .introImg2 {
   position: absolute;
   top: 474px;
-  left: 176px;
-  width: 238px;
+  right: 0px;
   height: 184px;
   z-index: 8;
 }
@@ -67,7 +67,6 @@
   position: absolute;
   top: 690px;
   left: 0px;
-  width: 238px;
   height: 184px;
   z-index: 9;
 }

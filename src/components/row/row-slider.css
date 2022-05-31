@@ -2,38 +2,46 @@
   all: unset;
   position: absolute;
   left: 0px;
-  top: 1152px;
+  top: 112px;
+  width: 48px;
+  height: 328px;
 }
 
 .rowSliderButtonRight {
   all: unset;
   position: absolute;
   right: 0px;
-  top: 1152px;
+  top: 112px;
+  width: 48px;
+  height: 328px;
 }
 
 .rowSliderSliderTrack1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 128px;
+  height: 152px;
+  position: absolute;
+  top: 112px;
 }
 
 .rowSliderSliderTrack2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 128px;
+  height: 152px;
+  position: absolute;
+  top: 288px;
+  right: 0px;
 }
 
 .rowSliderSlide1 {
-  background-color: #866262;
-  width: 128px;
-  height: 128px;
+  background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
+  height: 152px;
 }
 
 .rowSliderSlide2 {
-  background-color: #5effb1;
+  background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
   width: 128px;
-  height: 128px;
+  height: 152px;
 }

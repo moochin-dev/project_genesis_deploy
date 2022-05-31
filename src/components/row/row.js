@@ -4,19 +4,25 @@ import RowSlider from "./row-slider";
 
 const Row = (props) => {
   const waterBrands = props.waterBrands;
+  const windowWidth = props.windowWidth;
+
+  /*
+  <div className="rowBackground">
+          <RowSlider waterBrands={waterBrands} />
+        </div>
+  */
   return (
     <>
       <div className="rowWrapper">
         <div className="rowTextWrapper">
-          <p className="rowText1 contentTitle">당신이 먹는 생수,</p>
+          <p className="rowText1 mainSubTitle">당신이 먹는 생수,</p>
           <p className="rowText2 mainTitle">어떤 브랜드인가요?</p>
           <p className="rowText3 mainSubTitle rowGrayTypo">
-            (수질검사 통과 못한게 많다는 sub text)
+            선호하는 브랜드를 골라 자세하게 알아보세요.
           </p>
         </div>
-
         <div className="rowBackground">
-          <RowSlider waterBrands={waterBrands} />
+          <RowSlider waterBrands={waterBrands} windowWidth={windowWidth}/>
         </div>
       </div>
     </>

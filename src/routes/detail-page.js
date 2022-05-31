@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import './detail-page.css'
 
 export default function DetailPage() {
   const [waterBrand, setWaterBrand] = useState({});

@@ -54,11 +54,9 @@ const RowSlider = () => {
     }, Math.max(transitionTime1, transitionTime2));
   };
 
-  const handleSwipe = (direction) => {
+  const handleSwipe1 = (direction) => {
     let index1 = currentIndex1 + direction;
-    let index2 = currentIndex2 + direction;
     setCurrentIndex1(index1);
-    setCurrentIndex2(index2);
     //row1
     //오른쪽으로 갈 때
     if (currentIndex1 + direction === rowLength1) {
@@ -70,6 +68,12 @@ const RowSlider = () => {
       index1 = rowLength1 - 1;
       replaceSlide1(index1);
     }
+    setSlideTransition1(transitionStyle1);
+  };
+
+  const handleSwipe2 = (direction) => {
+    let index2 = currentIndex2 + direction;
+    setCurrentIndex2(index2);
     //row2
     //오른쪽으로 갈 때
     if (currentIndex2 + direction === rowLength2) {
@@ -81,7 +85,6 @@ const RowSlider = () => {
       index2 = rowLength2 - 1;
       replaceSlide2(index2);
     }
-    setSlideTransition1(transitionStyle1);
     setSlideTransition2(transitionStyle2);
   };
 
@@ -155,13 +158,13 @@ const RowSlider = () => {
           </div>
         ))}
       </div>
-      <button className="rowSliderButtonLeft" onClick={() => handleSwipe(-1)}>
+      <button className="rowSliderButtonLeft" onClick={() => handleSwipe1(-1)}>
         <img
           src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-left.png")}
           alt="btn-left"
         />
       </button>
-      <button className="rowSliderButtonRight" onClick={() => handleSwipe(1)}>
+      <button className="rowSliderButtonRight" onClick={() => handleSwipe2(1)}>
         <img
           src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-right.png")}
           alt="btn-right"

@@ -4,7 +4,6 @@ import { useWindowWidth } from "../custom-hooks";
 
 const Intro = () => {
   const windowWidth = useWindowWidth();
-  console.log(windowWidth);
 
   return (
     <div className="introWrapper">

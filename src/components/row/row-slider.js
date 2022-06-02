@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./row-slider.css";
+import { useWindowWidth, useWaterBrands } from "../../custom-hooks";
 
-const RowSlider = (props) => {
+const RowSlider = () => {
   //waterBrands 불러오기
-  const waterBrands = props.waterBrands;
+  const waterBrands = useWaterBrands();
+  console.log(waterBrands);
 
   let row1 = waterBrands.slice(0, waterBrands.length / 2);
   let row2 = waterBrands.slice(waterBrands.length / 2);
 
-  const rowLength1 = row1.length;
+  const rowLength1 = row1.length; //이 두개는 무한 슬라이드 구현에 쓰이는 변수임 건들지 마셈
   const rowLength2 = row2.length;
 
   //각각의 row 앞 뒤에 슬라이드 추가해서 무한 슬라이드처럼 보이게끔 하기
@@ -22,21 +24,11 @@ const RowSlider = (props) => {
   row2 = rowTail2.concat(row2, rowHead2);
 
   //dimension 만지기
-  const windowWidth = props.windowWidth;
-  const defaultWindowWidth = 360;
-  const percent = windowWidth / defaultWindowWidth;
-  const defaultSlideWidth = 152;
-  const defaultSlideWing = 80;
-  const [slideWidth, setSlideWidth] = useState(defaultSlideWidth);
-  const [slideWing, setSlideWing] = useState(defaultSlideWing);
-  const [slideGap, setSlideGap] = useState(
-    (defaultWindowWidth - defaultSlideWidth - 2 * defaultSlideWing) / 2
-  );
-  useEffect(() => {
-    setSlideWidth(defaultSlideWidth * percent);
-    setSlideWing(defaultSlideWing * percent);
-    setSlideGap((windowWidth - slideWidth - 2 * slideWing) / 2);
-  }, [windowWidth]);
+  const windowWidth = useWindowWidth();
+  const slideWidth = (152 * windowWidth) / 360;
+  const slideGap = (24 * windowWidth) / 360;
+  const trackWidth1 = slideWidth * row1.length + slideGap * (row1.length - 1);
+  const trackWidth2 = slideWidth * row2.length + slideGap * (row2.length - 1);
 
   //carousel의 슬라이딩 기능 구현
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -94,8 +86,12 @@ const RowSlider = (props) => {
     setSlideTransition2(transitionStyle2);
   };
 
+  /*
+  
+  */
+
   return (
-    <>
+    <div className="rowSliderWrapper">
       <div
         className="rowSliderSliderTrack1"
         style={{
@@ -120,7 +116,7 @@ const RowSlider = (props) => {
                 src={`${waterBrand.image_url}`}
                 alt={`${waterBrand.name}`}
                 style={{
-                  width: `${133 * percent}px`,
+                  width: `${slideWidth - 19}px`,
                   height: "133px",
                   margin: "9.5px",
                   boxSizing: "content-box",
@@ -134,22 +130,25 @@ const RowSlider = (props) => {
         className="rowSliderSliderTrack2"
         style={{
           transform: `translateX(${
-            152 - (128 + 16) * (2 + 1) + 16 / 2 - (128 + 16) * currentIndex2
+            windowWidth / 2 -
+            2 * slideWidth - 3 / 2 * slideGap -
+            (slideWidth + slideGap) * currentIndex2
           }px)`,
           transition: slideTransition2,
-          width: `${128 * row2.length + 16 * (row2.length - 1)}px`,
+          width: `${slideWidth * row2.length + slideGap * (row2.length - 1)}px`,
         }}
       >
         {row2.map((waterBrand, index) => (
-          <div className="rowSliderSlide2" key={index}>
+          <div className="rowSliderSlide2" key={index} style={{width: slideWidth}}>
             <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
               <img
                 src={`${waterBrand.image_url}`}
                 alt={`${waterBrand.name}`}
                 style={{
-                  width: "110px",
-                  height: "110px",
-                  margin: "9px 9px",
+                  width: `${slideWidth - 19}px`,
+                  height: "133px",
+                  margin: "9.5px",
+                  boxSizing: "content-box",
                 }}
               />
             </Link>
@@ -168,7 +167,7 @@ const RowSlider = (props) => {
           alt="btn-right"
         />
       </button>
-    </>
+    </div>
   );
 };
 

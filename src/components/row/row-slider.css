@@ -1,3 +1,11 @@
+.rowSliderWrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 552px;
+  position: absolute;
+  top: 1268px;
+}
+
 .rowSliderButtonLeft {
   all: unset;
   position: absolute;
@@ -32,7 +40,6 @@
   height: 152px;
   position: absolute;
   top: 288px;
-  right: 0px;
 }
 
 .rowSliderSlide1 {
@@ -42,6 +49,5 @@
 
 .rowSliderSlide2 {
   background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
-  width: 128px;
   height: 152px;
 }

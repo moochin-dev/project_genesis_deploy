@@ -1,7 +1,19 @@
 th {
   font-weight: normal;
+  text-align: center;
   white-space: pre-line;
-  box-sizing: content-box;
+}
+
+td {
+  text-align: center;
+}
+
+.col1 {
+  width: 64px;
+}
+
+.col2 {
+  width: 73px;
 }
 
 .tableArea {

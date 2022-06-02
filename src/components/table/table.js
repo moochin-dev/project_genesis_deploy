@@ -19,6 +19,13 @@ const Table = () => {
     <div className="tableArea">
       <div className="tableWrapper">
         <table>
+          <colgroup>
+            <col className="col1" />
+            <col className="col1" />
+            <col className="col2" />
+            <col className="col2" />
+            <col className="col1" />
+          </colgroup>
           <thead className="tableHead contentSubTitle">
             <tr>
               {columns.map((column, index) => (
@@ -46,12 +53,12 @@ const Table = () => {
               const isValid = invalidCount === 0 ? "O" : "X";
 
               return (
-                <tr key={index}>
-                  <td>{waterBrand.name}</td>
-                  <td>{matchedSources}</td>
-                  <td>{isValid}</td>
-                  <td>{invalidCount}</td>
-                  <td>comingSoon</td>
+                <tr key={index} style={{ borderBottom: "1px solid black" }}>
+                  <td className="contextText">{waterBrand.name}</td>
+                  <td className="contextText">{matchedSources}</td>
+                  <td className="contextText">{isValid}</td>
+                  <td className="contextText">{invalidCount}</td>
+                  <td className="contextText">comingSoon</td>
                 </tr>
               );
             })}

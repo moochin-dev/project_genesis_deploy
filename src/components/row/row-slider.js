@@ -41,14 +41,14 @@ const RowSlider = () => {
   const [slideTransition2, setSlideTransition2] = useState(transitionStyle2);
 
   const replaceSlide1 = (index1) => {
-    setTimeout(() => {
+    const timeOutId1 = setTimeout(() => {
       setSlideTransition1("");
       setCurrentIndex1(index1);
     }, Math.max(transitionTime1, transitionTime2));
   };
 
   const replaceSlide2 = (index2) => {
-    setTimeout(() => {
+    const timeOutId2 = setTimeout(() => {
       setSlideTransition2("");
       setCurrentIndex2(index2);
     }, Math.max(transitionTime1, transitionTime2));
@@ -84,10 +84,6 @@ const RowSlider = () => {
     setSlideTransition1(transitionStyle1);
     setSlideTransition2(transitionStyle2);
   };
-
-  /*
-  
-  */
 
   return (
     <div className="rowSliderWrapper">

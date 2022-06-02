@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./row-slider.css";
 import { useAxios, useWindowWidth } from "../../custom-hooks";
@@ -26,8 +26,6 @@ const RowSlider = () => {
   const windowWidth = useWindowWidth();
   const slideWidth = (152 * windowWidth) / 360;
   const slideGap = (24 * windowWidth) / 360;
-  const trackWidth1 = slideWidth * row1.length + slideGap * (row1.length - 1);
-  const trackWidth2 = slideWidth * row2.length + slideGap * (row2.length - 1);
 
   //carousel의 슬라이딩 기능 구현
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -41,22 +39,24 @@ const RowSlider = () => {
   const [slideTransition2, setSlideTransition2] = useState(transitionStyle2);
 
   const replaceSlide1 = (index1) => {
-    const timeOutId1 = setTimeout(() => {
+    setTimeout(() => {
       setSlideTransition1("");
       setCurrentIndex1(index1);
     }, Math.max(transitionTime1, transitionTime2));
   };
 
   const replaceSlide2 = (index2) => {
-    const timeOutId2 = setTimeout(() => {
+    setTimeout(() => {
       setSlideTransition2("");
       setCurrentIndex2(index2);
     }, Math.max(transitionTime1, transitionTime2));
   };
 
-  const handleSwipe1 = (direction) => {
+  const handleSwipe = (direction) => {
     let index1 = currentIndex1 + direction;
+    let index2 = currentIndex2 + direction;
     setCurrentIndex1(index1);
+    setCurrentIndex2(index2);
     //row1
     //오른쪽으로 갈 때
     if (currentIndex1 + direction === rowLength1) {
@@ -69,11 +69,6 @@ const RowSlider = () => {
       replaceSlide1(index1);
     }
     setSlideTransition1(transitionStyle1);
-  };
-
-  const handleSwipe2 = (direction) => {
-    let index2 = currentIndex2 + direction;
-    setCurrentIndex2(index2);
     //row2
     //오른쪽으로 갈 때
     if (currentIndex2 + direction === rowLength2) {
@@ -158,13 +153,13 @@ const RowSlider = () => {
           </div>
         ))}
       </div>
-      <button className="rowSliderButtonLeft" onClick={() => handleSwipe1(-1)}>
+      <button className="rowSliderButtonLeft" onClick={() => handleSwipe(-1)}>
         <img
           src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-left.png")}
           alt="btn-left"
         />
       </button>
-      <button className="rowSliderButtonRight" onClick={() => handleSwipe2(1)}>
+      <button className="rowSliderButtonRight" onClick={() => handleSwipe(1)}>
         <img
           src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-right.png")}
           alt="btn-right"

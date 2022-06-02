@@ -6,8 +6,8 @@ const Table = () => {
   const columns = [
     "브랜드",
     "제조원",
-    "수질적합여부",
-    "부적합판정횟수",
+    "수질적합\n여부",
+    "부적합\n판정횟수",
     "출시일",
   ];
 
@@ -15,52 +15,46 @@ const Table = () => {
   const { waterBrands, waterSources, brandSourceMappings, testHistory } =
     useAxios();
 
-
-
-  /*
-  //데이터 편집
-  for (let i = 0; i < waterSources.length; i++) {
-    waterSources[i].test_history = [];
-  }
-
-  for (let i = 0; i < testHistory.length; i++) {
-    const sourceIndex = testHistory[i].source - 2;
-    waterSources[sourceIndex].test_history.push(testHistory[i]);
-  }
-
-  console.log(waterSources);
-  
-  for (let i = 0; i < waterBrands.length; i++) {
-    waterBrands[i].sources = [];
-  }
-
-  for (let i = 0; i < brandSourceMappings.length; i++) {
-    const brandIndex = brandSourceMappings[i].brand - 1;
-    const sourceIndex = brandSourceMappings[i].source - 2;
-    waterBrands[brandIndex].sources.push(waterSources[sourceIndex]);
-  }
-
-  console.log(waterBrands);*/
-
   return (
     <div className="tableArea">
       <div className="tableWrapper">
-        <table className="tableHead">
-          <thead>
+        <table>
+          <thead className="tableHead contentSubTitle">
             <tr>
               {columns.map((column, index) => (
                 <th key={index}>{column}</th>
               ))}
             </tr>
           </thead>
-        </table>
-        <table className="tableBody">
           <tbody>
-            {waterBrands.map((waterBrand, index) => (
-              <tr key={index}>
-                <td>{waterBrand.name}</td>
-              </tr>
-            ))}
+            {waterBrands.map((waterBrand, index) => {
+              const waterBrandId = waterBrand.id;
+              const waterSourceIds = brandSourceMappings
+                .filter(
+                  (brandSourceMapping) =>
+                    brandSourceMapping.brand === waterBrandId
+                )
+                .map((brandSourceMapping) => brandSourceMapping.source);
+              const matchedSources = waterSourceIds.map((id) => {
+                if (id < 8) return waterSources[id - 2].name;
+                else return waterSources[id - 3].name;
+              });
+              const invalidCount = testHistory.filter((hist) =>
+                waterSourceIds.includes(hist.source)
+              ).length;
+
+              const isValid = invalidCount === 0 ? "O" : "X";
+
+              return (
+                <tr key={index}>
+                  <td>{waterBrand.name}</td>
+                  <td>{matchedSources}</td>
+                  <td>{isValid}</td>
+                  <td>{invalidCount}</td>
+                  <td>comingSoon</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

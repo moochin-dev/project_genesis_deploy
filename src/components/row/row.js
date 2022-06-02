@@ -3,11 +3,6 @@ import "./row.css";
 import RowSlider from "./row-slider";
 
 const Row = () => {
-  /*
-  <div className="rowBackground">
-          <RowSlider />
-        </div>
-  */
   return (
     <>
       <div className="rowWrapper">

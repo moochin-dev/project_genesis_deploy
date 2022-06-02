@@ -19,15 +19,27 @@ export const useWindowWidth = () => {
 //api
 axios.defaults.baseURL = "http://3.39.164.17:8000/";
 
-export const useWaterBrands = () => {
+export const useAxios = () => {
   const [waterBrands, setWaterBrands] = useState([]);
+  const [waterSources, setWaterSources] = useState([]);
+  const [testHistory, setTestHistory] = useState([]);
+  const [brandSourceMappings, setBrandSourceMappings] = useState([]);
   const fetchData = () => {
     axios.get("/waterbrand/").then((response) => {
       setWaterBrands(response.data);
+    });
+    axios.get("/watersource/").then((response) => {
+      setWaterSources(response.data);
+    });
+    axios.get("/testhistory/").then((response) => {
+      setTestHistory(response.data);
+    });
+    axios.get("/brandsourcemapping/").then((response) => {
+      setBrandSourceMappings(response.data);
     });
   };
   useEffect(() => {
     fetchData();
   }, []);
-  return waterBrands;
+  return { waterBrands, waterSources, testHistory, brandSourceMappings };
 };

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./row-slider.css";
-import { useWindowWidth, useWaterBrands } from "../../custom-hooks";
+import { useAxios, useWindowWidth } from "../../custom-hooks";
 
 const RowSlider = () => {
   //waterBrands 불러오기
-  const waterBrands = useWaterBrands();
-  console.log(waterBrands);
+  const waterBrands = useAxios().waterBrands;
 
   let row1 = waterBrands.slice(0, waterBrands.length / 2);
   let row2 = waterBrands.slice(waterBrands.length / 2);
@@ -131,7 +130,8 @@ const RowSlider = () => {
         style={{
           transform: `translateX(${
             windowWidth / 2 -
-            2 * slideWidth - 3 / 2 * slideGap -
+            2 * slideWidth -
+            (3 / 2) * slideGap -
             (slideWidth + slideGap) * currentIndex2
           }px)`,
           transition: slideTransition2,
@@ -139,7 +139,11 @@ const RowSlider = () => {
         }}
       >
         {row2.map((waterBrand, index) => (
-          <div className="rowSliderSlide2" key={index} style={{width: slideWidth}}>
+          <div
+            className="rowSliderSlide2"
+            key={index}
+            style={{ width: slideWidth }}
+          >
             <Link to={`/${waterBrand.id}`} state={{ waterBrand: waterBrand }}>
               <img
                 src={`${waterBrand.image_url}`}

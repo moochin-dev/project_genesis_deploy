@@ -35,7 +35,17 @@ jobs:
       run: npm install
     - name: Build               
       run: npm run build
-    - name: Push Contents to S3
-      run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }}
+#     - name: Push Contents to S3
+#       run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }}
+    - name: Deploy to S3
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.S3_BUCKET_NAME }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        SOURCE_DIR: "build"
     - name: Invalidate CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CDN_DISTRIBUTION_ID }} --paths "/*"

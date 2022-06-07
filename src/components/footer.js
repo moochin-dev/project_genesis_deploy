@@ -47,8 +47,8 @@ function Footer() {
             y2="16.4058"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#30D0D0" />
-            <stop offset="1" stop-color="#340869" />
+            <stop stopColor="#30D0D0" />
+            <stop offset="1" stopColor="#340869" />
           </linearGradient>
         </defs>
       </svg>

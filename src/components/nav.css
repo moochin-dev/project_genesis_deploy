@@ -1,10 +1,16 @@
 @import url("../typo.css");
 
 .navbarItems {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: black;
   height: 56px;
   display: flex;
   justify-content: space-between;
-  margin: 0 20px;
+  padding: 0 20px;
+  z-index: 10;
 }
 
 .navbarLogo {

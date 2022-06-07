@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
 const Nav = () => {
+  const [currURL, setCurrURL] = useState(window.location.href);
+  useEffect(() => {
+    setCurrURL(window.location.href);
+  }, []);
+
   return (
     <nav className="navbarItems">
       <svg

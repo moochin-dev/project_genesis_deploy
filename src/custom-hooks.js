@@ -17,7 +17,7 @@ export const useWindowWidth = () => {
 };
 
 //api
-axios.defaults.baseURL = "http://3.39.164.17:8000/";
+axios.defaults.baseURL = "https://passubackend.kro.kr/";
 
 export const useAxios = () => {
   const [waterBrands, setWaterBrands] = useState([]);

@@ -1,0 +1,25 @@
+@import url("../typo.css");
+
+.footerItems {
+  height: 64px;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+.footerInfo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footerInfoCategory {
+  margin-right: 20px;
+}
+
+.footerLogo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

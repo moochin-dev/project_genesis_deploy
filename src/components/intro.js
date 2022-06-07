@@ -13,13 +13,13 @@ const Intro = () => {
       </div>
       <img
         className="introImg1"
-        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img1.png")}
+        src={require("../img/intro-img1.png")}
         alt="introImg1"
         style={{ width: `${216 + (windowWidth - 360)}px` }}
       />
       <img
         className="introImg2"
-        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img2.png")}
+        src={require("../img/intro-img2.png")}
         alt="introImg2"
         style={{ width: `${184 + (windowWidth - 360)}px` }}
       />
@@ -27,13 +27,13 @@ const Intro = () => {
       <p className="introText4">{"생수 제조원은 6곳\n밖에 되지 않아요!"}</p>
       <img
         className="introImg3"
-        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img3.png")}
+        src={require("../img/intro-img3.png")}
         alt="introImg3"
         style={{ width: `${184 + (windowWidth - 360)}px` }}
       />
       <img
         className="introImg4"
-        src={require("/Users/obzva/Desktop/find-clean-water/src/img/intro-img4.png")}
+        src={require("../img/intro-img4.png")}
         alt="introImg4"
       />
     </div>

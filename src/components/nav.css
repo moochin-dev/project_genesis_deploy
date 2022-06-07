@@ -1,7 +1,6 @@
 @import url("../typo.css");
 
 .navbarItems {
-  background: #5effb1;
   height: 56px;
   display: flex;
   justify-content: space-between;
@@ -9,11 +8,14 @@
 }
 
 .navbarLogo {
-  background-color: #009fe3;
-  margin-bottom: 0;
-  color: black;
+  width: 84px;
+  height: 20px;
+  box-sizing: content-box;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
-.navbarLogo:hover {
-  color: white;
+.navbarHomeButton {
+  box-sizing: content-box;
+  padding: 6px;
 }

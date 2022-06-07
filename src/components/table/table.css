@@ -1,42 +1,28 @@
-th {
-  font-weight: normal;
-  text-align: center;
-  white-space: pre-line;
-}
-
-td {
-  text-align: center;
-}
-
-.col1 {
-  width: 64px;
-}
-
-.col2 {
-  width: 73px;
-}
-
-.tableArea {
-  width: 100%;
-  height: 416px;
-  background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
-  padding: 20px;
-}
+@import url(../../typo.css);
 
 .tableWrapper {
-  width: 320px;
-  height: 376px;
-  overflow: auto;
+  box-sizing: content-box;
   background-color: white;
+  width: 100%;
+  height: 778px;
 }
 
-.tableHead {
-  all: none;
-  width: 100%;
-  height: 56px;
-  background-color: black;
-  color: white;
-  position: sticky;
-  top: 0px;
-  padding: 0;
+.tableTextWrapper {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.tableText1 {
+  color: black;
+}
+
+.tableText2 {
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
+
+.tableText3 {
+  color: #707070;
 }

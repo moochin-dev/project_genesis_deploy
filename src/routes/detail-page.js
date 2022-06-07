@@ -8,7 +8,7 @@ export default function DetailPage() {
   const data = location.state.waterBrand;
   useEffect(() => {
     setWaterBrand(data);
-  }, [data]);
+  }, []);
 
   return (
     <>

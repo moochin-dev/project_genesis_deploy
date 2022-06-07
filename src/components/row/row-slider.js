@@ -155,13 +155,13 @@ const RowSlider = () => {
       </div>
       <button className="rowSliderButtonLeft" onClick={() => handleSwipe(-1)}>
         <img
-          src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-left.png")}
+          src={require("../../img/btn-left.png")}
           alt="btn-left"
         />
       </button>
       <button className="rowSliderButtonRight" onClick={() => handleSwipe(1)}>
         <img
-          src={require("/Users/obzva/Desktop/find-clean-water/src/img/btn-right.png")}
+          src={require("../../img/btn-right.png")}
           alt="btn-right"
         />
       </button>

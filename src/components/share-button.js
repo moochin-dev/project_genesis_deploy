@@ -1,8 +1,6 @@
-import { BackTop } from "antd";
-
-const BackTopButton = () => {
+const ShareButton = () => {
   return (
-    <BackTop>
+    <button>
       <svg
         width="44"
         height="44"
@@ -37,8 +35,8 @@ const BackTopButton = () => {
           </linearGradient>
         </defs>
       </svg>
-    </BackTop>
+    </button>
   );
 };
 
-export default BackTopButton;
+export default ShareButton;

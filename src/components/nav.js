@@ -1,25 +1,8 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./nav.css";
 
 const Nav = () => {
-  //click시에 버튼 fill 채워지도록 onClick 기능 구현
-  const [buttonFill, setButtonFill] = useState("none");
-  const handleTouchStart = () => {
-    setButtonFill("white");
-  };
-
-  //mainpage에선 백탑버튼으로, detailpage에선 mainpage버튼으로 갈 수 있게 기능 구현
-  const currLoc = useLocation().pathname;
-  const isHome = currLoc === "/";
-
-  const handleTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <nav className="navbarItems">
       <svg
@@ -60,60 +43,22 @@ const Nav = () => {
           </linearGradient>
         </defs>
       </svg>
-      {isHome && (
-        <button
-          className="navbarBacktopButton"
-          onClick={handleTop}
-          onTouchStart={(e) => {
-            setButtonFill("white");
-          }}
-          onTouchEnd={(e) => {
-            setButtonFill("none");
-          }}
+
+      <Link to="/" className="navbarHomeButton">
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 44 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 44 44"
-            fill={buttonFill}
-            xmlns="http://www.w3.org/2000/svg"
-            padding="11px 12px 11px 12px"
-          >
-            <path
-              d="M22 24.5094L24.9987 24.5014C25.2753 24.5006 25.5 24.7247 25.5 25.0013V31.992C25.5 32.5437 25.9468 32.9912 26.4985 32.992L30.9985 32.9985C31.5514 32.9993 32 32.5514 32 31.9985V20.2995C32 20.013 31.8772 19.7404 31.6627 19.5506L22.6627 11.5864C22.2843 11.2516 21.7157 11.2516 21.3373 11.5864L12.3373 19.5506C12.1228 19.7404 12 20.013 12 20.2995V32C12 32.5523 12.4477 33 13 33H17.5C18.0523 33 18.5 32.5523 18.5 32V25.0081C18.5 24.7325 18.723 24.5088 18.9987 24.5081L22 24.5"
-              stroke="white"
-              strokeWidth="1.5"
-            />
-          </svg>
-        </button>
-      )}
-      {!isHome && (
-        <Link
-          to="/"
-          className="navbarHomeButton"
-          onClick={handleTop}
-          onTouchStart={(e) => {
-            setButtonFill("white");
-          }}
-          onTouchEnd={(e) => {
-            setButtonFill("none");
-          }}
-        >
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 44 44"
-            fill={buttonFill}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22 24.5094L24.9987 24.5014C25.2753 24.5006 25.5 24.7247 25.5 25.0013V31.992C25.5 32.5437 25.9468 32.9912 26.4985 32.992L30.9985 32.9985C31.5514 32.9993 32 32.5514 32 31.9985V20.2995C32 20.013 31.8772 19.7404 31.6627 19.5506L22.6627 11.5864C22.2843 11.2516 21.7157 11.2516 21.3373 11.5864L12.3373 19.5506C12.1228 19.7404 12 20.013 12 20.2995V32C12 32.5523 12.4477 33 13 33H17.5C18.0523 33 18.5 32.5523 18.5 32V25.0081C18.5 24.7325 18.723 24.5088 18.9987 24.5081L22 24.5"
-              stroke="white"
-              strokeWidth="1.5"
-            />
-          </svg>
-        </Link>
-      )}
+          <path
+            d="M22 24.5094L24.9987 24.5014C25.2753 24.5006 25.5 24.7247 25.5 25.0013V31.992C25.5 32.5437 25.9468 32.9912 26.4985 32.992L30.9985 32.9985C31.5514 32.9993 32 32.5514 32 31.9985V20.2995C32 20.013 31.8772 19.7404 31.6627 19.5506L22.6627 11.5864C22.2843 11.2516 21.7157 11.2516 21.3373 11.5864L12.3373 19.5506C12.1228 19.7404 12 20.013 12 20.2995V32C12 32.5523 12.4477 33 13 33H17.5C18.0523 33 18.5 32.5523 18.5 32V25.0081C18.5 24.7325 18.723 24.5088 18.9987 24.5081L22 24.5"
+            stroke="white"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </Link>
     </nav>
   );
 };

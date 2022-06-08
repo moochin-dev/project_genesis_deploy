@@ -21,12 +21,6 @@
   padding-bottom: 18px;
 }
 
-.navbarBacktopButton {
-  all: unset;
-  box-sizing: content-box;
-  padding: 6px;
-}
-
 .navbarHomeButton {
   box-sizing: content-box;
   padding: 6px;

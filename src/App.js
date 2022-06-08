@@ -2,14 +2,13 @@ import React from "react";
 import "./App.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
-import BackTopButton from "./components/backtop";
+import ShareButton from "./components/share-button";
 import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <BackTopButton />
       <Outlet />
       <Footer />
     </div>

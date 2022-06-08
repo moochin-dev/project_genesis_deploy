@@ -25,3 +25,9 @@
   box-sizing: content-box;
   padding: 6px;
 }
+
+.navbarBacktopButton {
+  all: unset;
+  box-sizing: content-box;
+  padding: 6px;
+}

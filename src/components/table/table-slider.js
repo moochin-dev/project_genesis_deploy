@@ -29,7 +29,7 @@ const TableSlider = () => {
             {"부적합\n판정횟수"}
           </p>
           <p className="tableSliderHeaderText oneLine contentSubTitle">
-            출시일
+            출시년도
           </p>
         </div>
         <div className="tableSliderData">
@@ -63,7 +63,7 @@ const TableSlider = () => {
             }}
             onTouchStart={(e) => {
               setPrevButtonBackGroundColor("rgba(255,255,255,0.3)");
-              setPrevButtonTextColor("black");
+              setPrevButtonTextColor("blacks");
             }}
             onTouchEnd={(e) => {
               setPrevButtonBackGroundColor("black");

@@ -14,6 +14,24 @@
 .tableSliderHeader {
   background: black;
   height: 56px;
+  padding: 12px 8px 12px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableSliderHeaderText {
+  width: 64px;
+  height: 32px;
+  text-align: center;
+}
+
+.oneLine {
+  padding-top: 5px;
+}
+
+.twoLine {
+  white-space: pre-line;
+  line-height: 120%;
 }
 
 .tableSliderData {
@@ -40,26 +58,26 @@
 .tableSliderButtonWrapper {
   height: 48px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .tableSliderPrevButton {
   all: unset;
   height: 48px;
-  background: black;
+  text-align: center;
 }
 
 .tableSliderNextButton {
   all: unset;
   height: 48px;
-  background: black;
+  text-align: center;
 }
 
 .tableSliderButtonDivider {
-  position: relative;
+  position: absolute;
   background: rgba(255, 255, 255, 0.25);
   height: 26px;
   width: 2px;
-  top: 11px;
+  top: 2429px;
   bottom: 11px;
 }

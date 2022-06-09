@@ -1,72 +1,52 @@
 import React from "react";
-import { useAxios } from "../../custom-hooks";
-import "./table.css";
+import { useAxios, useWindowWidth } from "../../custom-hooks";
+import "./table-slider.css";
 
-const Table = () => {
-  const columns = [
-    "브랜드",
-    "제조원",
-    "수질적합\n여부",
-    "부적합\n판정횟수",
-    "출시일",
-  ];
-
+const TableSlider = () => {
   //api 호출////////
+  const windowWidth = useWindowWidth();
   const { waterBrands, waterSources, brandSourceMappings, testHistory } =
     useAxios();
 
   return (
-    <div className="tableArea">
-      <div className="tableWrapper">
-        <table>
-          <colgroup>
-            <col className="col1" />
-            <col className="col1" />
-            <col className="col2" />
-            <col className="col2" />
-            <col className="col1" />
-          </colgroup>
-          <thead className="tableHead contentSubTitle">
-            <tr>
-              {columns.map((column, index) => (
-                <th key={index}>{column}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {waterBrands.map((waterBrand, index) => {
-              const waterBrandId = waterBrand.id;
-              const waterSourceIds = brandSourceMappings
-                .filter(
-                  (brandSourceMapping) =>
-                    brandSourceMapping.brand === waterBrandId
-                )
-                .map((brandSourceMapping) => brandSourceMapping.source);
-              const matchedSources = waterSourceIds.map((id) => {
-                if (id < 8) return waterSources[id - 2].name;
-                else return waterSources[id - 3].name;
-              });
-              const invalidCount = testHistory.filter((hist) =>
-                waterSourceIds.includes(hist.source)
-              ).length;
-
-              const isValid = invalidCount === 0 ? "O" : "X";
-
-              return (
-                <tr key={index} style={{ borderBottom: "1px solid black" }}>
-                  <td className="contextText">{waterBrand.name}</td>
-                  <td className="contextText">{matchedSources}</td>
-                  <td className="contextText">{isValid}</td>
-                  <td className="contextText">{invalidCount}</td>
-                  <td className="contextText">comingSoon</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+    <div className="tableSliderArea">
+      <div className="tableSliderWrapper">
+        <div className="tableSliderHeader"></div>
+        <div className="tableSliderData">
+          <div className="tableSliderDataBorderBottom"></div>
+        </div>
+        <div className="tableSliderData">
+          <div className="tableSliderDataBorderBottom"></div>
+        </div>
+        <div className="tableSliderData">
+          <div className="tableSliderDataBorderBottom"></div>
+        </div>
+        <div className="tableSliderData">
+          <div className="tableSliderDataBorderBottom"></div>
+        </div>
+        <div className="tableSliderData"></div>
+        <div className="tableSliderTextWrapper">
+          <p className="contentText">
+            자세한 정보를 보고 싶다면, 해당 브랜드를 클릭하세요!
+          </p>
+        </div>
+        <div className="tableSliderButtonWrapper">
+          <div
+            className="tableSliderButtonDivider"
+            style={{ left: `${windowWidth / 2 - 20}px` }}
+          ></div>
+          <button
+            className="tableSliderPrevButton"
+            style={{ width: `${windowWidth / 2 - 20}px` }}
+          ></button>
+          <button
+            className="tableSliderNextButton"
+            style={{ width: `${windowWidth / 2 - 20}px` }}
+          ></button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Table;
+export default TableSlider;

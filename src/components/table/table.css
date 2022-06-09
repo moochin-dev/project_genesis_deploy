@@ -9,6 +9,8 @@
 
 .tableTextWrapper {
   text-align: center;
+  box-sizing: content-box;
+  height: 106px;
   padding-top: 80px;
   padding-bottom: 80px;
 }

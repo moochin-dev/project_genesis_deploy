@@ -5,9 +5,6 @@ import "./nav.css";
 const Nav = () => {
   //click시에 버튼 fill 채워지도록 onClick 기능 구현
   const [buttonFill, setButtonFill] = useState("none");
-  const handleTouchStart = () => {
-    setButtonFill("white");
-  };
 
   //mainpage에선 백탑버튼으로, detailpage에선 mainpage버튼으로 갈 수 있게 기능 구현
   const currLoc = useLocation().pathname;

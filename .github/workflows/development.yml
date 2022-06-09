@@ -34,7 +34,7 @@ jobs:
     - name: Install Dependencies   
       run: npm install
     - name: Build               
-      run: npm run build
+      run: CI='' npm run build
 #     - name: Push Contents to S3
 #       run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }}
     - name: Deploy to S3

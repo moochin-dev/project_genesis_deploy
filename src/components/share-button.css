@@ -1,0 +1,14 @@
+.shareButtonButton {
+  all: unset;
+  position: fixed;
+  right: 20px;
+  top: 450px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shareButtonButton.active {
+  opacity: 1;
+  z-index: 11;
+}

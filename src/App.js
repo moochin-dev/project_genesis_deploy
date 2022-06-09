@@ -11,6 +11,7 @@ function App() {
       <Nav />
       <Outlet />
       <Footer />
+      <ShareButton />
     </div>
   );
 }

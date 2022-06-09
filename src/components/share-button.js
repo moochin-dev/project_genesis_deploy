@@ -1,6 +1,29 @@
+import React, { useState, useEffect } from "react";
+import "./share-button.css";
+
 const ShareButton = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [btnOn, setBtnOn] = useState(false);
+  const handleFollow = () => {
+    setScrollY(window.pageYOffset);
+    if (scrollY > 100) setBtnOn(true);
+    else setBtnOn(false);
+  };
+
+  useEffect(() => {
+    const watch = () => {
+      window.addEventListener("scroll", handleFollow);
+    };
+    watch();
+    return () => {
+      window.removeEventListener("scroll", handleFollow);
+    };
+  });
+
   return (
-    <button>
+    <button
+      className={btnOn ? "shareButtonButton active" : "shareButtonButton"}
+    >
       <svg
         width="44"
         height="44"

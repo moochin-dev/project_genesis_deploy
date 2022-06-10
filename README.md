@@ -1,3 +1,6 @@
+# 필독!! 중요중요..
+waterSources api 의 id 값이 2부터 시작하고 8번은 누락되어 있는 상태라 그것에 맞게 데이터 매핑 알고리즘을 설정해두었음 !! 추후에 수정시에 참고하여 잘 살펴야 버그 안 남!!
+
 # Getting Started with Create React App
 무승이기여워
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

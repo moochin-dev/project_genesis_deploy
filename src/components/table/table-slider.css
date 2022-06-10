@@ -1,42 +1,112 @@
-th {
-  font-weight: normal;
-  text-align: center;
-  white-space: pre-line;
-}
+@import url(../../typo.css);
 
-td {
-  text-align: center;
-}
-
-.col1 {
-  width: 64px;
-}
-
-.col2 {
-  width: 73px;
-}
-
-.tableArea {
+.tableSliderArea {
   width: 100%;
   height: 416px;
   background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
   padding: 20px;
 }
 
-.tableWrapper {
-  width: 320px;
+.tableSliderWrapper {
   height: 376px;
-  overflow: auto;
-  background-color: white;
+  overflow: hidden;
 }
 
-.tableHead {
-  all: none;
-  width: 100%;
+.tableSliderHeader {
+  background: black;
   height: 56px;
-  background-color: black;
-  color: white;
-  position: sticky;
-  top: 0px;
-  padding: 0;
+  padding: 12px 8px 12px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableSliderHeaderText {
+  width: 64px;
+  height: 32px;
+  text-align: center;
+}
+
+.oneLine {
+  padding-top: 5px;
+}
+
+.twoLine {
+  white-space: pre-line;
+  line-height: 120%;
+}
+
+.tableSliderDataWrapper {
+  height: 240px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tableSliderDataSlide {
+  height: 240px;
+}
+
+.tableSliderData {
+  height: 48px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.tableSliderData.borderBottom {
+  position: relative;
+}
+
+.tableSliderDataText {
+  position: relative;
+  color: black;
+  width: 64px;
+  height: 32px;
+  white-space: pre-line;
+  text-align: center;
+  top: 6px;
+}
+
+.tableSliderDataDivider {
+  position: absolute;
+  height: 1px;
+  background: black;
+  top: 47px;
+  left: 6px;
+  right: 6px;
+}
+
+.tableSliderTextWrapper {
+  height: 32px;
+  background: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+
+.tableSliderButtonWrapper {
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tableSliderPrevButton {
+  all: unset;
+  height: 48px;
+  text-align: center;
+}
+
+.tableSliderNextButton {
+  all: unset;
+  height: 48px;
+  text-align: center;
+}
+
+.tableSliderButtonDivider {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+  height: 26px;
+  width: 2px;
+  top: 2429px;
+  bottom: 11px;
 }

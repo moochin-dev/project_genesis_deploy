@@ -1,5 +1,6 @@
 import React from "react";
 import "./table.css";
+import TableSlider from "./table-slider";
 
 const Table = () => {
   return (
@@ -11,6 +12,7 @@ const Table = () => {
           수질 적합도 검사는 매년 ?회 실시됩니다.
         </p>
       </div>
+      <TableSlider />
     </div>
   );
 };

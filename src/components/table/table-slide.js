@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function TableSlide(props) {
   const waterBrandGroup = props.waterBrandGroup;
@@ -12,7 +13,12 @@ function TableSlide(props) {
       {waterBrandGroup.map((waterBrand, index) => {
         if (waterBrand)
           return (
-            <div className="tableSliderData borderBottom" key={index}>
+            <Link
+              to={`/${waterBrand.id}`}
+              state={{ waterBrand: waterBrand }}
+              className="tableSliderData borderBottom"
+              key={index}
+            >
               <p
                 className="contentText tableSliderDataText "
                 style={{
@@ -49,7 +55,7 @@ function TableSlide(props) {
                   style={{ width: `${windowWidth - 52}` }}
                 ></div>
               )}
-            </div>
+            </Link>
           );
         else
           return (

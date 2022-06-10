@@ -9,6 +9,7 @@
 
 .tableSliderWrapper {
   height: 376px;
+  overflow: hidden;
 }
 
 .tableSliderHeader {
@@ -34,15 +35,43 @@
   line-height: 120%;
 }
 
+.tableSliderDataWrapper {
+  height: 240px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tableSliderDataSlide {
+  height: 240px;
+}
+
 .tableSliderData {
   height: 48px;
   background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 
-.tableSliderDataBorderBottom {
-  border-bottom: 1px solid black;
+.tableSliderData.borderBottom {
   position: relative;
-  top: 48px;
+}
+
+.tableSliderDataText {
+  position: relative;
+  color: black;
+  width: 64px;
+  height: 32px;
+  white-space: pre-line;
+  text-align: center;
+  top: 6px;
+}
+
+.tableSliderDataDivider {
+  position: absolute;
+  height: 1px;
+  background: black;
+  top: 47px;
   left: 6px;
   right: 6px;
 }

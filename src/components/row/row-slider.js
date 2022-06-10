@@ -5,7 +5,56 @@ import { useAxios, useWindowWidth } from "../../custom-hooks";
 
 const RowSlider = () => {
   //waterBrands 불러오기
-  const waterBrands = useAxios().waterBrands;
+  const { waterBrands, waterSources, brandSourceMappings, testHistory } =
+    useAxios();
+
+  //브랜드에 수원지 데이터 넣기 - 데이터가 호출 된 다음에 해야해서 if 문으로 시작
+  if (
+    waterBrands.length > 0 &&
+    waterSources.length > 0 &&
+    brandSourceMappings.length > 0 &&
+    testHistory.length > 0
+  ) {
+    //sourceTestHistory에 testhistory 넣기
+    for (let i = 0; i < waterSources.length; i++) {
+      waterSources[i].id = i + 1; //id가 2부터 시작하고 불연속적이라서 재설정
+      waterSources[i].test_history = [];
+    }
+
+    for (let i = 0; i < testHistory.length; i++) {
+      let sourceId = testHistory[i].source;
+      sourceId = sourceId < 8 ? sourceId - 1 : sourceId - 2; //위에서 id 재설정한 부분에 맞추어서 sourceId 또한 재설정
+      waterSources[sourceId].test_history.push(testHistory[i].date);
+    }
+
+    //brand에 source test-history 넣기
+    for (let i = 0; i < waterBrands.length; i++) {
+      waterBrands[i].sources = [];
+    }
+    for (let i = 0; i < brandSourceMappings.length; i++) {
+      const brandId = brandSourceMappings[i].brand;
+      let sourceId = brandSourceMappings[i].source;
+      sourceId = sourceId < 8 ? sourceId - 1 : sourceId - 2; //위에서 id 재설정한 부분에 맞추어서 sourceId 또한 재설정
+      waterBrands[brandId - 1].sources.push(
+        {test_history: waterSources[sourceId - 1].test_history}
+      );
+    }
+    
+    //brand에 통과여부 및 부적합판정횟수 prop 넣기
+    for (let i = 0; i < waterBrands.length; i++) {
+      let bool = true;
+      let count = 0;
+      const waterBrand = waterBrands[i]
+      for (let j = 0; j < waterBrand.sources.length; j++) {
+        if (waterBrand.sources[j].test_history.length > 0) {
+          if (bool) bool = false;
+          count += waterBrand.sources[j].test_history.length;
+        }
+      }
+      waterBrands[i].pass = bool;
+      waterBrands[i].invalid_count = count;
+    }
+  }
 
   let row1 = waterBrands.slice(0, waterBrands.length / 2);
   let row2 = waterBrands.slice(waterBrands.length / 2);

@@ -16,7 +16,7 @@ const TableSlider = () => {
   const { waterBrands, waterSources, brandSourceMappings, testHistory } =
     useAxios();
 
-  //브랜드에 수원지 데이터 넣기 - 데이터가 호출 된다음에 해야해서 if 문으로 시작
+  //브랜드에 수원지 데이터 넣기 - 데이터가 호출 된 다음에 해야해서 if 문으로 시작
   if (
     waterBrands.length > 0 &&
     waterSources.length > 0 &&
@@ -118,7 +118,7 @@ const TableSlider = () => {
 
   return (
     <div className="tableSliderArea">
-      {editedWaterBrandGroups.length > 2 && (
+      {editedWaterBrandGroups.length > 2 && ( //waterBrandGroups 만들고 난 후에 렌더해야 에러 안 남
         <div className="tableSliderWrapper">
           <div className="tableSliderHeader">
             <p className="tableSliderHeaderText oneLine contentSubTitle">

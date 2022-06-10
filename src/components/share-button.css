@@ -2,7 +2,7 @@
   all: unset;
   position: fixed;
   right: 20px;
-  top: 450px;
+  bottom: 64px;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;

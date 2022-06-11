@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import './detail-page.css'
+import "./detail-page.css";
+import DetailHero from "../components/detail-hero";
 
 export default function DetailPage() {
   const [waterBrand, setWaterBrand] = useState({});
@@ -9,9 +10,11 @@ export default function DetailPage() {
   useEffect(() => {
     setWaterBrand(data);
   }, [data]);
+  console.log(data);
 
   return (
     <>
+      <DetailHero />
       <h1>디테일 만드는 중 ㅜㅅㅜ</h1>
       <h2>외않되</h2>
       <h2>오 된다...!!!</h2>

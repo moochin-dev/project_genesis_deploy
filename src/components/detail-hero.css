@@ -1,0 +1,12 @@
+@import url(../typo.css);
+
+.detailHeroWrapper {
+  height: 1078px;
+}
+
+.detailHeroTextWrapper {
+  width: 304px;
+  height: 106px;
+  position: relative;
+  top: 136px;
+}

@@ -50,7 +50,7 @@ function DetailHero(props) {
         </div>
         <div className="detailHeroInfoText4Wrapper">
           <p className="contentSubTitle">출시년도</p>
-          <p className="contentText">{`${waterBrand.released_date.slice(0, 4)}년`}</p>
+          
         </div>
       </div>
       <div className="detailHeroSubBannerWrapper">

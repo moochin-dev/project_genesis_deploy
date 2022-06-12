@@ -35,16 +35,17 @@ const RowSlider = () => {
       const brandId = brandSourceMappings[i].brand;
       let sourceId = brandSourceMappings[i].source;
       sourceId = sourceId < 8 ? sourceId - 1 : sourceId - 2; //위에서 id 재설정한 부분에 맞추어서 sourceId 또한 재설정
-      waterBrands[brandId - 1].sources.push(
-        {test_history: waterSources[sourceId - 1].test_history}
-      );
+      waterBrands[brandId - 1].sources.push({
+        sourceName: waterSources[sourceId - 1].name,
+        test_history: waterSources[sourceId - 1].test_history,
+      });
     }
-    
+
     //brand에 통과여부 및 부적합판정횟수 prop 넣기
     for (let i = 0; i < waterBrands.length; i++) {
       let bool = true;
       let count = 0;
-      const waterBrand = waterBrands[i]
+      const waterBrand = waterBrands[i];
       for (let j = 0; j < waterBrand.sources.length; j++) {
         if (waterBrand.sources[j].test_history.length > 0) {
           if (bool) bool = false;
@@ -203,16 +204,10 @@ const RowSlider = () => {
         ))}
       </div>
       <button className="rowSliderButtonLeft" onClick={() => handleSwipe(-1)}>
-        <img
-          src={require("../../img/btn-left.png")}
-          alt="btn-left"
-        />
+        <img src={require("../../img/btn-left.png")} alt="btn-left" />
       </button>
       <button className="rowSliderButtonRight" onClick={() => handleSwipe(1)}>
-        <img
-          src={require("../../img/btn-right.png")}
-          alt="btn-right"
-        />
+        <img src={require("../../img/btn-right.png")} alt="btn-right" />
       </button>
     </div>
   );

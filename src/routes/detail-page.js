@@ -15,9 +15,13 @@ export default function DetailPage() {
     setWaterBrand(data);
   }, [data]);
 
+  console.log(waterBrand);
+
+
+
   return (
     <>
-      <DetailHero />
+      <DetailHero waterBrand={waterBrand} windowWidth={windowWidth} />
       <h1>디테일 만드는 중 ㅜㅅㅜ</h1>
       <h2>외않되</h2>
       <h2>오 된다...!!!</h2>

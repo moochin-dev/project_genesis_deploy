@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./detail-page.css";
 import DetailHero from "../components/detail-hero";
+import { useWindowWidth } from "../custom-hooks";
 
 export default function DetailPage() {
   const [waterBrand, setWaterBrand] = useState({});
+
+  const windowWidth = useWindowWidth();
+
   const location = useLocation();
   const data = location.state.waterBrand;
   useEffect(() => {
     setWaterBrand(data);
   }, [data]);
-  console.log(data);
 
   return (
     <>

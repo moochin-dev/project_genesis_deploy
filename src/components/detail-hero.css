@@ -2,11 +2,82 @@
 
 .detailHeroWrapper {
   height: 1078px;
+  position: relative;
 }
 
 .detailHeroTextWrapper {
   width: 304px;
   height: 106px;
-  position: relative;
+  position: absolute;
   top: 136px;
+  left: 20px;
 }
+
+.detailHeroMainBannerWrapper {
+  background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
+  position: absolute;
+  top: 242px;
+  left: 0px;
+  padding: 8px;
+}
+
+.detailHeroMainBannerImage {
+  width: 100%;
+  height: 100%;
+}
+
+.detailHeroInfoWrapper {
+  position: absolute;
+  top: 437px;
+}
+
+.detailHeroInfoText1Wrapper {
+  position: relative;
+  right: 0px;
+  height: 37px;
+  width: 100px;
+}
+
+.detailHeroInfoText1 {
+  text-align: right;
+}
+
+.detailHeroInfoText1Border {
+  position: absolute;
+  left: 80px;
+  right: 0px;
+  top: 32px;
+  border-bottom: white solid 1px;
+}
+
+.detailHeroInfoText2Wrapper {
+  box-sizing: content-box;
+  width: 108px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.detailHeroInfoText3Wrapper {
+    box-sizing: content-box;
+    width: 108px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+
+  .detailHeroInfoText4Wrapper {
+    box-sizing: content-box;
+    width: 108px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+
+  .detailHeroSubBannerWrapper {
+    position: absolute;
+    top:268px;
+  }

@@ -79,5 +79,41 @@
 
 .detailHeroSubBannerWrapper {
   position: absolute;
-  top: 268px;
+  top: 610px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailHeroSubBanner1 {
+  background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
+  border-radius: 8px;
+  width: 172px;
+  height: 196px;
+  padding: 4px;
+}
+
+.detailHeroSubBanner2 {
+  background: linear-gradient(127.7deg, #30d0d0 5.88%, #340869 95.98%);
+  border-radius: 8px;
+  width: 172px;
+  height: 196px;
+  padding: 4px;
+}
+
+.detailHeroSubBannerContentWrapper {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  width: 164px;
+  height: 148px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.detailHeroSubBannerButton {
+  all: unset;
+  width: 164px;
+  height: 34px;
+  border-radius: 8px;
+  text-align: center;
 }

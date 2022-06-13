@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./detail-hero.css";
 
 function DetailHero(props) {
+  const [button1Color, setButton1Color] = useState("black");
+  const [button2Color, setButton2Color] = useState("black");
+  const [button1TextColor, setButton1TextColor] = useState("white");
+  const [button2TextColor, setButton2TextColor] = useState("white");
+
   const windowWidth = props.windowWidth;
   const waterBrand = props.waterBrand;
 
@@ -9,6 +14,8 @@ function DetailHero(props) {
     waterBrand.sources.length > 1
       ? "OEM"
       : waterBrand.sources[0].sourceName.replace("-", "\n");
+
+  console.log(waterBrand);
 
   return (
     <div className="detailHeroWrapper">
@@ -68,7 +75,93 @@ function DetailHero(props) {
           <p className="contentText">{waterBrand.released_date.slice(0, 4)}</p>
         </div>
       </div>
-      <div className="detailHeroSubBannerWrapper"></div>
+      <div className="detailHeroSubBannerWrapper">
+        <div className="detailHeroSubBanner1">
+          <div className="detailHeroSubBannerContentWrapper">
+            <p
+              className="contentTitle"
+              style={{
+                whiteSpace: "pre-line",
+                textAlign: "center",
+              }}
+            >
+              {"수질 부적합\n판정 횟수"}
+            </p>
+            <p
+              className="contentSubTitle"
+              style={{
+                textAlign: "center",
+              }}
+            >{`${waterBrand.released_date.slice(0, 4)}년 출시 이후로`}</p>
+            <p
+              className="mainTitle"
+              style={{
+                textAlign: "center",
+              }}
+            >{`${waterBrand.invalid_count}회`}</p>
+          </div>
+          <button
+            className="detailHeroSubBannerButton"
+            style={{ background: `${button1Color}` }}
+            onTouchStart={(e) => {
+              setButton1Color("rgba(255, 255, 255, 0.3)");
+              setButton1TextColor("black");
+            }}
+            onTouchEnd={(e) => {
+              setButton1Color("black");
+              setButton1TextColor("white");
+            }}
+          >
+            <p className="contentText" style={{ color: `${button1TextColor}` }}>
+              전체 랭킹 보러 가기
+            </p>
+          </button>
+        </div>
+        <div className="detailHeroSubBanner2">
+          <div className="detailHeroSubBannerContentWrapper">
+            <p
+              className="contentTitle"
+              style={{
+                whiteSpace: "pre-line",
+                textAlign: "center",
+                paddingTop: "8px",
+                paddingBottom: "10px",
+              }}
+            >
+              소비자가
+            </p>
+            <p
+              className="contentSubTitle"
+              style={{
+                textAlign: "center",
+              }}
+            >{`?위/?개 브랜드 중`}</p>
+            <p
+              className="mainTitle"
+              style={{
+                textAlign: "center",
+              }}
+            >{`?위`}</p>
+          </div>
+          <button
+            className="detailHeroSubBannerButton"
+            style={{ background: `${button2Color}` }}
+            onTouchStart={(e) => {
+              setButton2Color("rgba(255, 255, 255, 0.3)");
+              setButton2TextColor("black");
+            }}
+            onTouchEnd={(e) => {
+              setButton2Color("black");
+              setButton2TextColor("white");
+            }}
+          >
+            {" "}
+            <p className="contentText" style={{ color: `${button2TextColor}` }}>
+              쿠팡에서 구매하기
+            </p>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

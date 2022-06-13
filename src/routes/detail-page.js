@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import DetailHero from "../components/detail-hero";
+import DetailTable from "../components/detail-table";
 import { useWindowWidth } from "../custom-hooks";
 
 export default function DetailPage() {
@@ -11,6 +12,7 @@ export default function DetailPage() {
   return (
     <>
       <DetailHero waterBrand={waterBrand} windowWidth={windowWidth} />
+      <DetailTable />
     </>
   );
 }

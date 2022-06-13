@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./detail-hero.css";
 
 function DetailHero(props) {
@@ -27,7 +28,6 @@ function DetailHero(props) {
         className="detailHeroMainBannerWrapper"
         style={{
           width: `${(windowWidth / 360) * 220}px`,
-          height: `${(windowWidth / 360) * 344}px`,
         }}
       >
         <img
@@ -143,12 +143,14 @@ function DetailHero(props) {
               }}
             >{`?위`}</p>
           </div>
+
           <button
             className="detailHeroSubBannerButton"
             style={{ background: `${button2Color}` }}
             onTouchStart={(e) => {
               setButton2Color("rgba(255, 255, 255, 0.3)");
               setButton2TextColor("black");
+              
             }}
             onTouchEnd={(e) => {
               setButton2Color("black");

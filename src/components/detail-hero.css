@@ -60,24 +60,24 @@
 }
 
 .detailHeroInfoText3Wrapper {
-    box-sizing: content-box;
-    width: 108px;
-    height: 25px;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 15px;
-  }
+  box-sizing: content-box;
+  width: 108px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
 
-  .detailHeroInfoText4Wrapper {
-    box-sizing: content-box;
-    width: 108px;
-    height: 25px;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 15px;
-  }
+.detailHeroInfoText4Wrapper {
+  box-sizing: content-box;
+  width: 108px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
 
-  .detailHeroSubBannerWrapper {
-    position: absolute;
-    top:268px;
-  }
+.detailHeroSubBannerWrapper {
+  position: absolute;
+  top: 268px;
+}

@@ -6,10 +6,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import MainPage from "./routes/main-page";
 import DetailPage from "./routes/detail-page";
+import ScrollToTop from "./components/scroll-to-top";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
+    <ScrollToTop/>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<MainPage />} />
